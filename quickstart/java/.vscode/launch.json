@@ -1,0 +1,30 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestProducer",
+            "request": "launch",
+            "mainClass": "TestProducer",
+            "projectName": "event-hubs-kafka-java-producer",
+            "vmArgs": "-javaagent:./producer/applicationinsights-agent-3.4.1.jar"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestConsumer",
+            "request": "launch",
+            "mainClass": "TestConsumer",
+            "projectName": "event-hubs-kafka-java-consumer",
+            "vmArgs": "-javaagent:./consumer/applicationinsights-agent-3.4.1.jar"
+        }
+    ]
+}

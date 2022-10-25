@@ -1,0 +1,18 @@
+{
+    "connectionString": "InstrumentationKey=7dc27db7-690f-4e8c-b446-2c37aeb27e56;IngestionEndpoint=https://francecentral-1.in.applicationinsights.azure.com/;LiveEndpoint=https://francecentral.livediagnostics.monitor.azure.com/",
+    "role":{
+        "name":"Java Kafka Producer",
+        "instance":"OnPremise"
+    },
+    "instrumentation": {
+        "logging": {
+          "level": "TRACE"
+        }
+      },
+      "sampling":{
+        "percentage":100
+      },
+      "preview":{
+        "captureControllerSpans": true
+      }
+    }

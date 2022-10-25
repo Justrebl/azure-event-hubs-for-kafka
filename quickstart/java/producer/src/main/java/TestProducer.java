@@ -13,7 +13,7 @@ import java.util.concurrent.Executors;
 
 public class TestProducer {
     //Change constant to send messages to the desired topic, for this example we use 'test'
-    private final static String TOPIC = "test";
+    private final static String TOPIC = "eh-java-kafka-fc";
         
     private final static int NUM_THREADS = 1;
 
@@ -34,7 +34,7 @@ public class TestProducer {
     private static Producer<Long, String> createProducer() {
         try{
             Properties properties = new Properties();
-            properties.load(new FileReader("src/main/resources/producer.config"));
+            properties.load(new FileReader("./producer/src/main/resources/producer.config"));
             properties.put(ProducerConfig.CLIENT_ID_CONFIG, "KafkaExampleProducer");
             properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, LongSerializer.class.getName());
             properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
